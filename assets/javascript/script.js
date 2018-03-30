@@ -19,8 +19,6 @@ var videoSources = ["https://www.youtube.com/embed/fGqdIPer-ms", "https://www.yo
          console.log(video);
          $("button").html("Keep Clicking");
          $("#lead").attr("src",video);
-
-        
     });
 
     // function myNewSrc() {
