@@ -30,7 +30,7 @@ function search() {
 }
 
 function onSearchResponse(response) {
-    showResponse(response);
+     showResponse(response);
 }
 
 // $(document).on("click", "#random-btn" function (x) {
