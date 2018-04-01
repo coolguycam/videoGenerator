@@ -29,7 +29,10 @@ $(document).ready(function () {
                         "https://www.youtube.com/embed/2CG5XMuz_nY?start=45",
                         "https://www.youtube.com/embed/5NlHYdxi85w?start=164",
                         "https://www.youtube.com/embed/NhheiPTdZCw?autoplay=1",
-                        "https://www.youtube.com/embed/TIJraYqUZ5g?autoplay=1"]
+                        "https://www.youtube.com/embed/TIJraYqUZ5g?autoplay=1",
+                        "https://www.youtube.com/embed/v85VNXT0Euk?autoplay=1", 
+                        "https://www.youtube.com/embed/J15vfXqnwWw?autoplay=1", "https://www.youtube.com/embed/CUNq2_VjRn4?autoplay=1", "https://www.youtube.com/embed/3lgcBZdMZxM?autoplay=1", "https://www.youtube.com/embed/rsEne1ZiQrk?autoplay=1", "https://www.youtube.com/embed/bNcj9iR956M?autoplay=1", "https://www.youtube.com/embed/ET6XGZqOyjY?autoplay=1", "https://www.youtube.com/embed/Me8jYR9Q0kw?autoplay=1", "https://www.youtube.com/embed/CeCgsmTjHjk?autoplay=1", "https://www.youtube.com/embed/l9jZFwwZQJs?autoplay=1", "https://www.youtube.com/embed/tG-IGNvfrg8?autoplay=1", "https://www.youtube.com/embed/dc89yyOS0Z8?autoplay=1", "https://www.youtube.com/embed/-NIP2zgVsRY?autoplay=1", "https://www.youtube.com/embed/Ml9v3wHLuWI?autoplay=1", "https://www.youtube.com/embed/g-F3A9n9BLg?autoplay=1", "https://www.youtube.com/embed/RF-Mqs2qC-M?autoplay=1", "https://www.youtube.com/embed/CiFnp-oKZQc?autoplay=1", "https://www.youtube.com/embed/T8lWjQRhQXY?autoplay=1", "https://www.youtube.com/embed/sjVqDg32_8s?autoplay=1", 
+                        "https://www.youtube.com/embed/ZcCp7488puc?autoplay=1"]
                         
     // Different phrases for when you click the button
 
@@ -122,8 +125,10 @@ $(document).ready(function () {
             }
 
             var vidId = baseURL.join("");
-            ploiujm.push(vidId);
-            ploiujm.forEach("https://www.youtube.com/embed/" + ploiujm[i] + "?autoplay=1");
+            console.log(vidId);
+            // debugger;
+            var urlKey= "https://www.youtube.com/embed/" + String(vidId) + "?autoplay=1";
+            ploiujm.push(urlKey);
         }
         console.log(ploiujm);
         
