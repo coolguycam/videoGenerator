@@ -30,7 +30,7 @@ $(document).ready(function () {
                         "https://www.youtube.com/embed/5NlHYdxi85w?start=164",
                         "https://www.youtube.com/embed/NhheiPTdZCw?autoplay=1",
                         "https://www.youtube.com/embed/TIJraYqUZ5g?autoplay=1"]
-
+                        
     // Different phrases for when you click the button
 
     var clickOptions = ["Keep Going", "Keep Clicking","Keep It Real", "Move Foward", "Next Vid", "What's Next", "Click Here", "Press Button", "Enjoy Vid",
@@ -101,24 +101,32 @@ $(document).ready(function () {
 // function makeObject(){
 
     var YOUR_API_KEY = 'AIzaSyAuXPcEOJndYVhYw_uAzBkCrEFGuFpeOZ4';
-    var queryURL = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=' + YOUR_API_KEY;
-
+    var queryURL = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=US&key=' + YOUR_API_KEY;
+    
     $.ajax({
         url: queryURL,
         method: "GET"
       }).done(function(response) {
+        console.log(response);
+        var ploiujm = [];
+        
 
-        var baseURL = [];
+        for (var i=0; i<response.items.length;i++){
+            var baseURL = [];
+            
+            for (var j=0; j<11; j++){ 
+                var identity = response.items[i].snippet.thumbnails.default.url[j+23];
+                console.log(identity);
+                baseURL.push(identity);
+                
+            }
 
-        for (i=0; i<11; i++){ 
-          var identity = response.items[0].snippet.thumbnails.default.url[i+23];
-          console.log(identity);
-          baseURL.push(identity);
+            var vidId = baseURL.join("");
+            ploiujm.push(vidId);
+            ploiujm.forEach("https://www.youtube.com/embed/" + ploiujm[i] + "?autoplay=1");
         }
-
-        var vidId = baseURL.join("");
-        console.log(vidId);
-      
+        console.log(ploiujm);
+        
       });
 // } 
         // var newVidz = [];
