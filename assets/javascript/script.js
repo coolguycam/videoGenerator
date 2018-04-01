@@ -32,7 +32,8 @@ $(document).ready(function () {
                         "https://www.youtube.com/embed/rVeMiVU77wo?autoplay=1",
                         "https://www.youtube.com/embed/2CG5XMuz_nY?start=45",
                         "https://www.youtube.com/embed/5NlHYdxi85w?start=164",
-                        "https://www.youtube.com/embed/NhheiPTdZCw?autoplay=1"]
+                        "https://www.youtube.com/embed/NhheiPTdZCw?autoplay=1",
+                        "https://www.youtube.com/embed/TIJraYqUZ5g?autoplay=1"]
 
     // Different phrases for when you click the button
 
