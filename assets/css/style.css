@@ -1,17 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster|Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Ubuntu');
 
 .navbar {
     padding: 0px;
-    border-bottom: px solid rgb(200,200,200);
+    border-bottom: 1px solid rgb(200,200,200);
+}
+.navbar .container {
+    padding: 0px;
 }
 
 .navbar-header {
-    padding: 5px;
     border-radius: 2.5px;
 }
 
 .navbar-brand {
-    color: #19CFFF;
+    color: #19CFFF !important;
     font-family: 'Lobster Two';
     font-size: 26px;
 }
+.nav-item {
+    position: relative;
+    padding: 0px 10px;
+    font-family: ubuntu;
+}
+
+#nav-add-btn {
+    font-size: 24px;
+    color: #19CFFF;
+}
+#random-btn {
+    position: fixed;
+    right: 15px;
+    bottom: 50%;
+
+    background-color: #19CFFF;
+    color: white;
+    border: 2px solid rgb(133, 225, 250);
+}
+
+
+
