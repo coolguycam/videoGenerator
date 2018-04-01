@@ -43,8 +43,9 @@ $(document).ready(function () {
                        
 
 
-    console.log(videoSources);
-
+    // console.log(videoSources);
+    // console.log(clickOptions);
+    
     // Function used to add autoplay capabilities to videos and push to sources:
 
     // function newVideo(x) {
@@ -75,14 +76,45 @@ $(document).ready(function () {
     // Button randomly chooses new video and push to html:
 
     $("button").on("click", function () {
-        var video = videoSources[Math.floor(Math.random() * videoSources.length)];
-        console.log(video);
-        $("button").html(clickOptions[Math.floor(Math.random() * clickOptions.length)]);
-        $("#lead").attr("src", video);
+        // var video = videoSources[Math.floor(Math.random() * videoSources.length)];
+        // console.log(video);
+        // $("button").html(clickOptions[Math.floor(Math.random() * clickOptions.length)]);
+        // $("#lead").attr("src", video);
     });
 
-   
+    var YOUR_API_KEY = 'AIzaSyAuXPcEOJndYVhYw_uAzBkCrEFGuFpeOZ4';
+    var queryURL = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=' + YOUR_API_KEY;
 
+     // var queryURL = 'https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.channels.list?' +
+     //    'part=id&forUsername=GoogleDevelopers';
+    
 
+// Function for pulling URL signature from API object
+// function urlSignature() {
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).done(function(response) {
+        
+        
+        
+      });
+// }
 
 });
+
+
+function urlSignature() {
+    // Empty array for pushing URL signature
+    var baseURL = [];
+    // For loop that pushes 11-alphanumerical URL signature 
+    for (i=0; i<11; i++){ 
+      var identity = String(response.items[0].snippet.thumbnails.default.url[i+23]);
+      console.log(identity);
+      baseURL.push(identity);
+    }
+    // New element that creates URL signature string
+    var vidId = baseURL.join("");
+    console.log(vidId);
+    return vidId;
+}
