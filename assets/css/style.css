@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Lobster+Two');
+
+.navbar {
+    padding: 0px;
+    border-bottom: px solid rgb(200,200,200);
+}
+
+.navbar-header {
+    padding: 5px;
+    border-radius: 2.5px;
+}
+
+.navbar-brand {
+    color: #19CFFF;
+    font-family: 'Lobster Two';
+    font-size: 26px;
+}
