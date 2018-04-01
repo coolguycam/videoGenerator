@@ -2,10 +2,6 @@ console.log("hey");
 
 $(document).ready(function () {
 
-    // Empty array for pushing new videos:
-
-    var newVidz = [];
-
     // Sources for the iframes:
 
     var videoSources = ["https://www.youtube.com/embed/6YzGOq42zLk?autoplay=1", 
@@ -43,8 +39,9 @@ $(document).ready(function () {
                        
 
 
-    console.log(videoSources);
-
+    // console.log(videoSources);
+    // console.log(clickOptions);
+    
     // Function used to add autoplay capabilities to videos and push to sources:
 
     // function newVideo(x) {
@@ -81,8 +78,64 @@ $(document).ready(function () {
         $("#lead").attr("src", video);
     });
 
-   
+    
+// function urlSignature() {
+//     var baseURL = [];
+//     for (i=0; i<11; i++){ 
+//       var identity = response.items[0].snippet.thumbnails.default.url[i+23];
+//       console.log();
+//       baseURL.push();
+//     }
+//     var vidId = baseURL.join("");
+//     console.log(vidId);
+//     return vidId;
+// }
 
 
+    
+
+     // var queryURL = 'https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.channels.list?' +
+     //    'part=id&forUsername=GoogleDevelopers';
+    
+
+// function makeObject(){
+
+    var YOUR_API_KEY = 'AIzaSyAuXPcEOJndYVhYw_uAzBkCrEFGuFpeOZ4';
+    var queryURL = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=' + YOUR_API_KEY;
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).done(function(response) {
+
+        var baseURL = [];
+
+        for (i=0; i<11; i++){ 
+          var identity = response.items[0].snippet.thumbnails.default.url[i+23];
+          console.log(identity);
+          baseURL.push(identity);
+        }
+
+        var vidId = baseURL.join("");
+        console.log(vidId);
+      
+      });
+// } 
+        // var newVidz = [];
+
+        // for (i=0; i<response.length; i++) {
+
+        //     var newData = urlSignature(response[i]);
+        //     console.log(newData);
+
+        // }
+// }
+
+
+
+    // urlSignature('https://i.ytimg.com/vi/CUNq2_VjRn4/default.jpg');
+    // console.log(urlSignature('https://i.ytimg.com/vi/CUNq2_VjRn4/default.jpg'));
+    
 
 });
+
