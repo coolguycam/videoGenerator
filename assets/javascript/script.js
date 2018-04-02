@@ -74,7 +74,8 @@ $(document).ready(function () {
 
     // Button randomly chooses new video and push to html:
 
-    $("#random-btn").on("click", function () {
+    $("#random-btn").on("click", function (event) {
+        event.preventDefault();
         var video = videoSources[Math.floor(Math.random() * videoSources.length)];
         console.log(video);
         $("button").html(clickOptions[Math.floor(Math.random() * clickOptions.length)]);
