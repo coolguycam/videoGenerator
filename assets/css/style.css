@@ -28,11 +28,18 @@
     color: #19CFFF;
 }
 #random-btn {
-    position: fixed;
     right: 15px;
     bottom: 50%;
 
     background-color: #19CFFF;
+    color: white;
+    border: 2px solid rgb(133, 225, 255);
+}
+#music-btn {
+    right: 15px;
+    bottom: 50%;
+
+    background-color: rgb(163, 25, 255);
     color: white;
     border: 2px solid rgb(133, 225, 250);
 }
