@@ -122,7 +122,7 @@ $(document).ready(function() {
 
 
 
-//    var YOUR_API_KEY = "AIzaSyAuXPcEOJndYVhYw_uAzBkCrEFGuFpeOZ4";
+//    var YOUR_API_KEY = "";
 //    var queryURL =
 //      "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=US&key=" +
 //      YOUR_API_KEY;
