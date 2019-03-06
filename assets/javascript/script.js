@@ -16,6 +16,7 @@ $(document).ready(function() {
   var videoSources = [];
 
   var musicVideoArr = [
+	"https://www.youtube.com/embed/xLNeZogTsK8?autoplay=1",
     "https://www.youtube.com/embed/dc89yyOS0Z8?autoplay=1",
     "https://www.youtube.com/embed/NhheiPTdZCw?autoplay=1",
     "https://www.youtube.com/embed/TIJraYqUZ5g?autoplay=1",
